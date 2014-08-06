@@ -7,12 +7,13 @@ be great.  Let me know if anything is confusing.
 ## Get pip
 
 Everything should be at [this link](http://pip.readthedocs.org/en/latest/installing.html),
-but I'll reiterate here.  Open up Terminal and run these commands:
+but I'll reiterate here.  Open up Terminal and run these commands
+(you'll need to enter in the root user password):
 
 ```sh
 cd ~/ # This isn't really necessary
 curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
-python get-pip.py
+sudp python get-pip.py
 ```
 
 This *should* install pip properly.  Oh, if you were wondering, pip apparently
