@@ -77,9 +77,9 @@ need the output from these commands
 
 ```sh
 which python
-\# => /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+# => /Library/Frameworks/Python.framework/Versions/2.7/bin/python
 pwd
-\# => /Users/brianmcgue 
+# => /Users/brianmcgue 
 ```
 
 So in Terminal type `crontab -e`, then KEEP READING BEFORE YOU TYPE ANYTHING ELSE.
