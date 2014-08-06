@@ -23,7 +23,9 @@ Clever.
 
 To test this, run :
 
-> gem search ^rails$
+```sh
+gem search ^rails$
+```
 
 Hopefully you'll see something along the lines of:
 
