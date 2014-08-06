@@ -7,3 +7,10 @@ as 'user friendly' as possible, but I can't make any promises that it will
 be great.  Let me know if anything is confusing.
 
 ##### You'll need pip
+
+If you're on a Mac, I think the easiest way I know how to do this is with Ruby.
+Open Terminal in your Applications.  Enter this:
+
+```sh
+cd ~/ # Go to root directory
+```
