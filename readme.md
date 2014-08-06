@@ -69,8 +69,13 @@ and replace the url with you main search url.
 
 So head on over to [craigslist](http://www.craigslist.org/).
 Fill out the exact search that you would continually go to every 20 minutes or
-so if you had the time.  Then copy the url, open `craigslist.py` in a text editor,
-and replace the `mainSearch` url with your custom url.
+so if you had the time.  Then copy the url, open `craigslist.py` in a text editor:
+
+```sh
+open -a TextEdit craigslist.py
+```
+
+and replace the `mainSearch` url with your custom url, then save and quit.
 
 ## Another tricky part: creating a cron job
 
