@@ -85,12 +85,18 @@ need the output from these commands
 
 ```sh
 which python
-# => /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+# => /usr/bin/python
 pwd
 # => /Users/brianmcgue 
 ```
 
-So in Terminal type `crontab -e`, then KEEP READING BEFORE YOU TYPE ANYTHING ELSE.
+So in Terminal type:
+
+```sh
+crontab -e
+```
+
+Then KEEP READING BEFORE YOU TYPE ANYTHING ELSE.
 
 This will open your crontab (file that holds all cron jobs) to edit.  It will open
 the file in vim.  If you don't know how to use vim, it's a living hell.  If you do,
@@ -105,10 +111,10 @@ Press `i`.  Then copy and paste this, filling in the correct names:
 For me, this would be:
 
 ```sh
-*/20 * * * * /Library/Frameworks/Python.framework/Versions/2.7/bin/python /Users/brianmcgue/craigslist.py
+*/20 * * * * /usr/bin/python /Users/brianmcgue/craigslist.py
 ```
 
-* Note: you will not be able to use your cursor in vim, just your keyboard.
+* Note: you will not be able to use your cursor in vim, just your keyboard, but you can scroll up
 
 Then press the `esc` key, and type `:wq` before hitting enter.
 
