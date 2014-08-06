@@ -113,4 +113,8 @@ Then you're done.
 All you need to do is go into your crontab, `crontab -e`, press `dd`, then press
 `:wq` and hit enter.  All *should* be fine after that.
 
+## Not done
 
+I realize this is terrible, and I'll plan to make it better sometime in the near
+future.  Hopefully all you'll have to do is run one script and everything will
+magically happen.
