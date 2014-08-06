@@ -62,7 +62,37 @@ curl https://raw.githubusercontent.com/brianmcgue/Craigslist/master/craigslist.p
 ```
 
 Here's the tricky part though. You'll need to open that file up in a text editor
-and replace the url with you main search url.  So head on over to [craigslist](http://www.craigslist.org/).
+and replace the url with you main search url.
+
+So head on over to [craigslist](http://www.craigslist.org/).
 Fill out the exact search that you would continually go to every 20 minutes or
 so if you had the time.  Then copy the url, open `craigslist.py` in a text editor,
 and replace the `mainSearch` url with your custom url.
+
+## Another tricky part: creating a cron job
+
+Cron jobs are great.  They are tasks that you ask your computer to run every set
+amount of time, which you get to decide.  I've just made it 20 minutes.
+
+```sh
+which python
+\# => /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+pwd
+\# => /Users/brianmcgue 
+```
+
+So in Terminal type `crontab -e`, then KEEP READING BEFORE YOU TYPE ANYTHING ELSE.
+
+This will open your crontab (file that holds all cron jobs) to edit.  It will open
+the file in vim.  If you don't know how to use vim, it's a living hell.  If you do,
+good for you I guess.
+
+Press `i`.  Then copy and paste this:
+
+```sh
+*/20 * * * * python ~/craigslist.py
+```
+
+Then press the `esc` key, and type `:wq` before hitting enter.
+
+
