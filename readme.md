@@ -13,7 +13,7 @@ but I'll reiterate here.  Open up Terminal and run these commands
 ```sh
 cd ~/ # This isn't really necessary
 curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
-sudp python get-pip.py
+sudo python get-pip.py
 ```
 
 This *should* install pip properly.  Oh, if you were wondering, pip apparently
