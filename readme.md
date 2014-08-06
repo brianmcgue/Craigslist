@@ -72,7 +72,8 @@ and replace the `mainSearch` url with your custom url.
 ## Another tricky part: creating a cron job
 
 Cron jobs are great.  They are tasks that you ask your computer to run every set
-amount of time, which you get to decide.  I've just made it 20 minutes.
+amount of time, which you get to decide.  I've just made it 20 minutes. You'll
+need the output from these commands
 
 ```sh
 which python
@@ -87,12 +88,29 @@ This will open your crontab (file that holds all cron jobs) to edit.  It will op
 the file in vim.  If you don't know how to use vim, it's a living hell.  If you do,
 good for you I guess.
 
-Press `i`.  Then copy and paste this:
+Press `i`.  Then copy and paste this, filling in the correct names:
 
 ```sh
-*/20 * * * * python ~/craigslist.py
+*/20 * * * * which_python_output pwd_output/craigslist.py
 ```
 
+For me, this would be:
+
+```sh
+*/20 * * * * /Library/Frameworks/Python.framework/Versions/2.7/bin/python /Users/brianmcgue/craigslist.py
+```
+
+* Note: you will not be able to use your cursor in vim, just your keyboard.
+
 Then press the `esc` key, and type `:wq` before hitting enter.
+
+Hopefully the terminal will say `crontab: installing new crontab`
+
+Then you're done.
+
+## Stopping the search
+
+All you need to do is go into your crontab, `crontab -e`, press `dd`, then press
+`:wq` and hit enter.  All *should* be fine after that.
 
 
