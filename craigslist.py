@@ -10,7 +10,11 @@ def notify(title, subtitle, message, open):
 	os.system('/usr/local/bin/terminal-notifier {}'.format(' '.join([m, t, s, o])))
 
 def main():
-	mainSearch = "http://sfbay.craigslist.org/search/sfc/apa?bedrooms=3&maxAsk=5250&nh=1&nh=18&nh=25&sale_date=-"
+	
+	##### THIS IS THE LINE YOU REPLACE. EVERYTHING BETWEEN THE DOUBLE QUOTES ("")
+	mainSearch = "http://www.craigslist.com/url-to-search"
+	#####
+	
 	firstResponse = urllib2.urlopen(mainSearch)
 	html1 = firstResponse.read()
 	mainSoup = BeautifulSoup(html1)
