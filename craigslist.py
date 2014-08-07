@@ -27,7 +27,7 @@ def main():
 			aptSoup = BeautifulSoup(aptHTML)
 			postTime = time.strptime(aptSoup.time.get('datetime'), '%Y-%m-%dT%H:%M:%S-0700')
 			minutesAgo = (time.mktime(now) - time.mktime(postTime)) / 60
-			if minutesAgo < 30000:
+			if minutesAgo < 30:
 				notify(
 					title='Found an apartment!',
 					subtitle=href,
